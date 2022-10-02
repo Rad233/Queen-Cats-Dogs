@@ -10,17 +10,17 @@ import software.bernie.geckolib3.model.provider.data.EntityModelData;
 
 public class PrincessCatModel extends AnimatedGeoModel<PrincessCatEntity> {
     @Override
-    public Identifier getModelLocation(PrincessCatEntity object) {
+    public Identifier getModelResource(PrincessCatEntity object) {
         return new Identifier(QueenCats.MOD_ID, "geo/humanoid_cat_children.geo.json");
     }
 
     @Override
-    public Identifier getTextureLocation(PrincessCatEntity object) {
+    public Identifier getTextureResource(PrincessCatEntity object) {
         return PrincessCatRenderer.LOCATION_BY_VARIANT.get(object.getVariant());
     }
 
     @Override
-    public Identifier getAnimationFileLocation(PrincessCatEntity animatable) {
+    public Identifier getAnimationResource(PrincessCatEntity animatable) {
         return new Identifier(QueenCats.MOD_ID, "animations/humanoid_cat.animation.json");
     }
 

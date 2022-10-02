@@ -16,14 +16,13 @@ import net.minecraft.entity.mob.AbstractSkeletonEntity;
 import net.minecraft.entity.mob.CreeperEntity;
 import net.minecraft.entity.mob.GhastEntity;
 import net.minecraft.entity.mob.MobEntity;
-import net.minecraft.entity.passive.HorseBaseEntity;
+import net.minecraft.entity.passive.HorseEntity;
 import net.minecraft.entity.passive.PassiveEntity;
 import net.minecraft.entity.passive.TameableEntity;
 import net.minecraft.entity.player.PlayerEntity;
 import net.minecraft.item.DyeItem;
 import net.minecraft.item.Item;
 import net.minecraft.item.ItemStack;
-import net.minecraft.item.Items;
 import net.minecraft.nbt.NbtCompound;
 import net.minecraft.recipe.Ingredient;
 import net.minecraft.scoreboard.AbstractTeam;
@@ -293,7 +292,7 @@ public class PrincessDogEntity extends HumanoidDogEntity implements IAnimatable{
                 && !((PlayerEntity) owner).shouldDamagePlayer((PlayerEntity) target)) {
             return false;
         }
-        if (target instanceof HorseBaseEntity && ((HorseBaseEntity) target).isTame()) {
+        if (target instanceof HorseEntity && ((HorseEntity) target).isTame()) {
             return false;
         }
         return !(target instanceof TameableEntity) || !((TameableEntity) target).isTamed();

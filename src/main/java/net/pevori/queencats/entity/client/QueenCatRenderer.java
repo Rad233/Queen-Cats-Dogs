@@ -33,7 +33,7 @@ public class QueenCatRenderer extends GeoEntityRenderer<QueenCatEntity> {
     }
 
     @Override
-    public Identifier getTextureLocation(QueenCatEntity instance) {
+    public Identifier getTextureResource(QueenCatEntity instance) {
         if(instance.isMogu()){
             return new Identifier(QueenCats.MOD_ID, "textures/entity/queen_cat/humanoid_cat_mogu.png");
         }

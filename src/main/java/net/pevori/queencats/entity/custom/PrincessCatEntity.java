@@ -14,7 +14,7 @@ import net.minecraft.entity.data.TrackedData;
 import net.minecraft.entity.data.TrackedDataHandlerRegistry;
 import net.minecraft.entity.mob.CreeperEntity;
 import net.minecraft.entity.mob.GhastEntity;
-import net.minecraft.entity.passive.HorseBaseEntity;
+import net.minecraft.entity.passive.HorseEntity;
 import net.minecraft.entity.passive.PassiveEntity;
 import net.minecraft.entity.passive.TameableEntity;
 import net.minecraft.entity.player.PlayerEntity;
@@ -293,7 +293,7 @@ public class PrincessCatEntity extends HumanoidCatEntity implements IAnimatable 
                 && !((PlayerEntity) owner).shouldDamagePlayer((PlayerEntity) target)) {
             return false;
         }
-        if (target instanceof HorseBaseEntity && ((HorseBaseEntity) target).isTame()) {
+        if (target instanceof HorseEntity && ((HorseEntity) target).isTame()) {
             return false;
         }
         return !(target instanceof TameableEntity) || !((TameableEntity) target).isTamed();

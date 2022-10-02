@@ -17,7 +17,7 @@ import net.minecraft.entity.mob.AbstractSkeletonEntity;
 import net.minecraft.entity.mob.CreeperEntity;
 import net.minecraft.entity.mob.GhastEntity;
 import net.minecraft.entity.mob.MobEntity;
-import net.minecraft.entity.passive.HorseBaseEntity;
+import net.minecraft.entity.passive.HorseEntity;
 import net.minecraft.entity.passive.PassiveEntity;
 import net.minecraft.entity.passive.TameableEntity;
 import net.minecraft.entity.player.PlayerEntity;
@@ -304,7 +304,7 @@ public class QueenDogEntity extends HumanoidDogEntity implements IAnimatable {
                 && !((PlayerEntity) owner).shouldDamagePlayer((PlayerEntity) target)) {
             return false;
         }
-        if (target instanceof HorseBaseEntity && ((HorseBaseEntity) target).isTame()) {
+        if (target instanceof HorseEntity && ((HorseEntity) target).isTame()) {
             return false;
         }
         return !(target instanceof TameableEntity) || !((TameableEntity) target).isTamed();

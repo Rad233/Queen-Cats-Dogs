@@ -12,14 +12,14 @@ public class PrincessDogModel extends AnimatedGeoModel<PrincessDogEntity>{
     protected static final String koroSan = "Korone";
 
     @Override
-    public Identifier getModelLocation(PrincessDogEntity object) {
+    public Identifier getModelResource(PrincessDogEntity object) {
         return new Identifier(QueenCats.MOD_ID, "geo/humanoid_dog_children.geo.json");
     }
 
     @Override
-    public Identifier getTextureLocation(PrincessDogEntity object) {
+    public Identifier getTextureResource(PrincessDogEntity object) {
         if(object.hasCustomName()){
-            if(object.getCustomName().asString() == koroSan){
+            if(object.getCustomName().toString() == koroSan){
                 return new Identifier(QueenCats.MOD_ID, "textures/entity/queen_dog/humanoid_dog_doog.png");
             }
         }
@@ -28,7 +28,7 @@ public class PrincessDogModel extends AnimatedGeoModel<PrincessDogEntity>{
     }
 
     @Override
-    public Identifier getAnimationFileLocation(PrincessDogEntity animatable) {
+    public Identifier getAnimationResource(PrincessDogEntity animatable) {
         return new Identifier(QueenCats.MOD_ID, "animations/humanoid_dog.animation.json");
     }
 
