@@ -23,14 +23,6 @@ public class HumanoidCatEntity extends TameableEntity{
     public PassiveEntity createChild(ServerWorld var1, PassiveEntity var2) {
         return null;
     }
-
-    public boolean getAttackingState() {
-		return this.dataTracker.get(ATTACK_STATE);
-	}
-
-	public void setAttackingState(Boolean attacking) {
-		this.dataTracker.set(ATTACK_STATE, attacking);
-	}
     
     public boolean isMogu(){
         String s = Formatting.strip(this.getName().getString());

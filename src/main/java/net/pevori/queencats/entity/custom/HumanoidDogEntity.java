@@ -24,14 +24,6 @@ public class HumanoidDogEntity extends TameableEntity{
         return null;
     }
 
-    public boolean getAttackingState() {
-        return this.dataTracker.get(ATTACK_STATE);
-    }
-
-    public void setAttackingState(Boolean attacking) {
-        this.dataTracker.set(ATTACK_STATE, attacking);
-    }
-
     public boolean isDoog(){
         String s = Formatting.strip(this.getName().getString());
         return (s != null && s.toLowerCase().contains(koroSan));

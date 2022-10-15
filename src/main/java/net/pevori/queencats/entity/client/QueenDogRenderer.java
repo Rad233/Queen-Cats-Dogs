@@ -2,6 +2,8 @@ package net.pevori.queencats.entity.client;
 
 import java.util.Map;
 
+import javax.annotation.Nullable;
+
 import com.google.common.collect.Maps;
 import net.minecraft.client.render.RenderLayer;
 import net.minecraft.client.render.VertexConsumer;
@@ -39,9 +41,10 @@ public class QueenDogRenderer extends GeoEntityRenderer<QueenDogEntity>{
         return LOCATION_BY_VARIANT.get(instance.getVariant());
     }
 
+    @Nullable
     @Override
     public RenderLayer getRenderType(QueenDogEntity animatable, float partialTicks, MatrixStack stack,
-            VertexConsumerProvider renderTypeBuffer, VertexConsumer vertexBuilder, int packedLightIn,
+            @Nullable VertexConsumerProvider renderTypeBuffer, @Nullable VertexConsumer vertexBuilder, int packedLightIn,
             Identifier textureLocation) {
 
         return super.getRenderType(animatable, partialTicks, stack, renderTypeBuffer, vertexBuilder, packedLightIn,
